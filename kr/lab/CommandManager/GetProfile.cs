@@ -1,14 +1,14 @@
-class GetPlayerStats : ICommand
+class CurrentUserProfile : ICommand
 {
     public GameManager _gameManager;
     
-    public GetPlayerStats(GameManager gameManager)
+    public CurrentUserProfile(GameManager gameManager)
     {
         _gameManager = gameManager;
     }
     public void Execute()
     {
-        _gameManager.PrintAccountStats();
+        _gameManager.PrintCurrentUserProfile();
     }
 
     public string GetDescription()

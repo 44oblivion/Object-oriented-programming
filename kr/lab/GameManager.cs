@@ -165,12 +165,12 @@ public class GameManager
             Console.WriteLine("Ім'я не може бути порожнім.");
         }
 
-        if (name.Contains(" "))
+        else if (name.Contains(" "))
         {
             Console.WriteLine("Ім'я не може містити пробіли.");
         }
 
-        if (CheckValidUsername(name))
+        else if (CheckValidUsername(name))
         {
             Console.WriteLine("Користувач з таким ім'ям вже існує");
         }
@@ -246,9 +246,9 @@ public class GameManager
     }
 
 
-    public void PrintAccountStats()
+    public void PrintCurrentUserProfile()
     {
-        GameAccount player = _accountService.PrintUserStats();
+        GameAccount player = _accountService.CurrentUserProfile();
         Console.WriteLine($"Статистика гравця {player.UserName}:");
         Console.WriteLine("Індекси гравця\tГравець\tРейтинг\tКількість ігор");
         Console.WriteLine($"{player.PlayerId,-15}\t{player.UserName}\t{player.CurrentRating}\t{player.GamesCount}");

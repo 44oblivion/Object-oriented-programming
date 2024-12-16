@@ -30,7 +30,7 @@ public class AccountService : iAccountService{
     public void UpdateAccount(int id, string username){
         _accountRepository.Update(id, username);    
     }
-    public GameAccount PrintUserStats(){
+    public GameAccount CurrentUserProfile(){
         return UserSession.currentUser;
     }
     public GameAccount GetByUserName(string userName){

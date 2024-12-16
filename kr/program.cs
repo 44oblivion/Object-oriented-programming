@@ -16,7 +16,7 @@ class Program
         commandManager.RegisterCommand("1", new PlayGame(gameManager));
         commandManager.RegisterCommand("2", new UpdatePlayer(gameManager));
         commandManager.RegisterCommand("3", new GetPlayerByUserName(gameManager)); 
-        commandManager.RegisterCommand("4", new GetPlayerStats(gameManager));
+        commandManager.RegisterCommand("4", new CurrentUserProfile(gameManager));
         commandManager.RegisterCommand("5", new GameHistory(gameManager));
 
         commandManager.RegisterCommand("8", new DeletePlayer(gameManager));

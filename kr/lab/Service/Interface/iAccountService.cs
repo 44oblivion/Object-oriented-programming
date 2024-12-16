@@ -5,6 +5,6 @@ public interface iAccountService{
     void RemoveAccount(GameAccount account);
     void UpdateAccount(int id, string username);
     GameAccount GetByUserName(string userName);
-    GameAccount PrintUserStats();   
+    GameAccount CurrentUserProfile();   
     List<GameAccount> GetAllAccounts();
 }
